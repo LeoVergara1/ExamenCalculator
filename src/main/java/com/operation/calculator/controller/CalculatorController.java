@@ -14,7 +14,7 @@ public class CalculatorController {
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/calculator")
-	public Calculator calculator(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Calculator(counter.incrementAndGet(), String.format(template, name));
+	public Calculator calculator(@RequestParam(value = "firstParam", defaultValue = "0") String firstParam, @RequestParam(value = "secondParam", defaultValue = "0") String secondParam) {
+		return new Calculator(10);
 	}
 }
